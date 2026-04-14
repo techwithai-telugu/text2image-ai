@@ -1,0 +1,271 @@
+/* ======================================== Developer Page ======================================== */
+
+.developer-page {
+  min-height: 100vh;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  padding-top: var(--header-height-mobile);
+  padding-bottom: calc(var(--nav-height-mobile) + var(--space-6));
+}
+
+.developer-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+}
+
+/* ─── Modern Hero ────────────────────────────────────────────────────────── */
+.dev-hero-modern {
+  text-align: center;
+  margin-bottom: var(--space-8);
+  padding: var(--space-8) var(--space-4);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-border);
+}
+
+.dev-avatar-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto var(--space-4);
+}
+
+.dev-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  object-fit: cover;
+  border: 3px solid var(--color-accent);
+  box-shadow: 0 8px 16px rgba(124, 58, 237, 0.2);
+  animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  50% { border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%; }
+  100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
+.online-indicator {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 14px;
+  height: 14px;
+  background: #10b981;
+  border: 3px solid var(--color-surface);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.dev-name-modern {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-1);
+  background: var(--color-accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dev-tagline-modern {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-6);
+}
+
+.dev-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.dev-stat-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  min-width: 80px;
+}
+
+.stat-value {
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+  color: var(--color-text-primary);
+}
+
+.stat-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-tertiary);
+}
+
+/* ─── Cards ─────────────────────────────────────────────────────────────── */
+.dev-card-section {
+  margin-bottom: var(--space-8);
+}
+
+.glass-card {
+  background: var(--color-surface);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+
+.dev-card-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-3);
+  color: var(--color-accent);
+}
+
+.dev-card-body {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ─── Social Grid ───────────────────────────────────────────────────────── */
+.dev-section-title {
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-tertiary);
+  text-align: center;
+}
+
+.dev-social-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+@media (min-width: 480px) {
+  .dev-social-grid-modern {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.social-btn-modern {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.social-icon-box {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  color: var(--social-color);
+  transition: all var(--transition-fast);
+}
+
+.social-name {
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-secondary);
+}
+
+.social-btn-modern:hover {
+  transform: translateY(-4px);
+  border-color: var(--social-color);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn-modern:hover .social-icon-box {
+  background: var(--social-color);
+  color: white;
+}
+
+.social-btn-modern:hover .social-name {
+  color: var(--color-text-primary);
+}
+
+/* ─── Support Section ───────────────────────────────────────────────────── */
+.dev-support-section {
+  margin: var(--space-10) 0;
+}
+
+.support-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5);
+  background: var(--color-accent);
+  color: white;
+  border-radius: var(--radius-xl);
+  gap: var(--space-4);
+}
+
+.support-info h3 {
+  margin: 0 0 4px;
+  font-size: var(--text-base);
+}
+
+.support-info p {
+  margin: 0;
+  font-size: var(--text-xs);
+  opacity: 0.9;
+}
+
+.support-btn-modern {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: white;
+  color: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-full);
+  font-weight: var(--font-bold);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ─── Footer ────────────────────────────────────────────────────────────── */
+.dev-footer-simple {
+  text-align: center;
+  padding: var(--space-8) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.dev-footer-simple p {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  margin-bottom: 8px;
+}
+
+.footer-links-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dot {
+  font-size: 18px;
+  line-height: 0;
+}

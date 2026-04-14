@@ -1,0 +1,85 @@
+/* ======================================== Support & Donation — Pro Studio ======================================== */
+
+/* Desktop Header Style (Always Minimal) */
+.coffee-btn-minimal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-primary);
+  font-size: 13px;
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.coffee-btn-minimal:hover { background: var(--color-surface-hover); border-color: var(--color-accent); }
+.coffee-btn-minimal svg { color: var(--color-accent); }
+
+/* Mobile Row Style (Home & Settings) */
+.coffee-card-minimal-mobile {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-4);
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+@media (min-width: 1024px) {
+  /* Hide support cards on desktop (only show in header) */
+  .coffee-card-minimal-mobile {
+    display: none !important;
+  }
+}
+
+.coffee-mobile-trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 14px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
+.coffee-icon-mini-box {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 221, 0, 0.15);
+  color: #FFDD00;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.coffee-mini-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.coffee-mini-label {
+  font-size: 13px;
+  font-weight: var(--font-bold);
+  margin-bottom: 2px;
+}
+
+.coffee-mini-subtext {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+}
+
+.mini-chevron {
+  color: var(--color-text-tertiary);
+  opacity: 0.5;
+}
+
+.coffee-card-minimal-mobile:active {
+  transform: scale(0.98);
+  background: var(--color-surface-active);
+}
