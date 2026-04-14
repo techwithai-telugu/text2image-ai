@@ -7,10 +7,14 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Manifest Cleanliness
 node_modules
 dist
 dist-ssr
 *.local
+.vite
+.gemini
+.vercel
 
 # Editor directories and files
 .vscode/*
