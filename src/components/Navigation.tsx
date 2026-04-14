@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ThemeToggle, ShareButton } from './HeaderIcons';
 import SupportDev from './SupportDev';

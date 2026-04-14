@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Navigation from './Navigation';
 import MobileHeader from './MobileHeader';
-import { ThemeToggle, GalleryIcon, ShareButton } from './HeaderIcons';
+import { ThemeToggle, ShareButton } from './HeaderIcons';
 
 interface GeneratedImage {
   id: string;
